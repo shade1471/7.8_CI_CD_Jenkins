@@ -5,9 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "testMobile": "cypress run --env viewportWidth=390,viewportHeight=844",
-    "testHeaded": "cypress open",
-    "testHeadedMobile": "cypress open --env viewportWidth=390,viewportHeight=844"
+        
+    "cy:login": "cypress run --spec cypress/e2e/login.cy.js",
+    "cy:orderMovie": "cypress run --spec cypress/e2e/orderMovie.cy.js",
+    "cy:mainPage": "cypress run --spec cypress/e2e/mainPageTest.cy.js",
+
+    "e2e:loginTest": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/login.cy.js",
+    "e2e:orderMovie": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/orderMovie.cy.js ",
+    "e2e:mainPage": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/mainPageTest.cy.js",
+    
+    "e2e:parallel": "npm run e2e:loginTest -- --group login --ci-build-id 15 & npm run e2e:mainPage -- --group main --ci-build-id 15 & npm run e2e:orderMovie -- --group order --ci-build-id 15"
   },
   "author": "Andrey Gribanov",
   "license": "ISC",

@@ -1,0 +1,10 @@
+{
+    "header": ".page-header__title",
+    "navMenu": ".page-nav",
+    "navDayTomorrow": "a.page-nav__day:nth-of-type(2)",
+    "movieHall": ".movie-seances__hall",
+    "movieTime": ".movie-seances__time",
+    "orderHeader": ".buying__info-hall",
+    "orderButton": ".acceptin-button",
+    "qrCode": ".ticket__info-qr"
+}

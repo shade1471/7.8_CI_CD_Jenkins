@@ -1,7 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  projectId: "ej6mg1",
+  projectId: "hiwwvq",
   e2e: {
     baseUrl: "http://qamid.tmweb.ru",
     setupNodeEvents(on, config) {

@@ -16,8 +16,8 @@
     "cy:loginFolder": "cypress run --record --key 32849861-7c32-4ed3-8ef1-7b22eaaaf959 --spec cypress/e2e/loginTest/*",
     "cy:orderFolder": "cypress run --record --key 32849861-7c32-4ed3-8ef1-7b22eaaaf959 --spec cypress/e2e/orderTest/*",
       
-    "cy:parallel": "start npm run cy:login -- --browser chrome --group login --ci-build-id 1 & npm run cy:orderMovie -- --browser electron  --group order --ci-build-id 1",
-    "cy:parallelFolder": "start npm run cy:loginFolder -- --browser chrome --group loginFolder --ci-build-id 1 & npm run cy:orderFolder -- --browser electron  --group orderFolder --ci-build-id 1"
+    "cy:parallel": "start npm run cy:login -- --browser chrome --group login --ci-build-id 6 & npm run cy:orderMovie -- --browser electron  --group order --ci-build-id 6",
+    "cy:parallelFolder": "start npm run cy:loginFolder -- --browser chrome --group loginFolder --ci-build-id 8 & npm run cy:orderFolder -- --browser electron  --group orderFolder --ci-build-id 8"
   },
   "author": "Andrey Gribanov",
   "license": "ISC",

@@ -41,3 +41,35 @@ Cypress.Commands.add("selectSeats", (row, ...seats) => {
     ).should("exist");
   }
 });
+
+Cypress.Commands.add("addUser", (body) => {
+  cy.request("POST", "https://petstore.swagger.io/v2/user", body).should(
+    (response) => {
+      expect(response.status).eq(200);
+    }
+  );
+});
+
+Cypress.Commands.add("loginApi", (body) => {
+  cy.request(
+    "GET",
+    `https://petstore.swagger.io/v2/user/login?username=${body.username}&password=${body.password}`
+  ).should((response) => {
+    expect(response.status).eq(200);
+  });
+});
+
+Cypress.Commands.add("deleteUser", (userName) => {
+  cy.request("DELETE", `https://petstore.swagger.io/v2/user/${userName}`);
+});
+
+Cypress.Commands.add("getUser", (userName) => {
+  cy.request({
+    url: `https://petstore.swagger.io/v2/user/${userName}`,
+    failOnStatusCode: false,
+  });
+});
+
+Cypress.Commands.add("updateUser", (userName, body) => {
+  cy.request("PUT", `https://petstore.swagger.io/v2/user/${userName}`, body);
+});

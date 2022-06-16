@@ -4,17 +4,18 @@
   "description": "HW cypress 2",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run",
-        
-    "cy:login": "cypress run --spec cypress/e2e/login.cy.js",
-    "cy:orderMovie": "cypress run --spec cypress/e2e/orderMovie.cy.js",
-    "cy:mainPage": "cypress run --spec cypress/e2e/mainPageTest.cy.js",
+    "cy:chrome": "cypress run --browser chrome", 
+    "cy:electron": "cypress run --browser electron",
+    "cy:edge": "cypress run --browser edge",
 
-    "e2e:loginTest": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/login.cy.js",
-    "e2e:orderMovie": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/orderMovie.cy.js ",
-    "e2e:mainPage": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/mainPageTest.cy.js",
-    
-    "e2e:parallel": "npm run e2e:loginTest -- --group login --ci-build-id 15 & npm run e2e:mainPage -- --group main --ci-build-id 15 & npm run e2e:orderMovie -- --group order --ci-build-id 15"
+    "cy:login": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/login.cy.js",
+    "cy:orderMovie": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/orderMovie.cy.js",
+
+    "cy:loginFolder": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/loginTest/*",
+    "cy:orderFolder": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/orderTest/*",
+      
+    "cy:parallel": "start npm run cy:login -- --browser chrome --group login --ci-build-id 28 & npm run cy:orderMovie -- --browser electron  --group order --ci-build-id 28",
+    "cy:parallelFolder": "start npm run cy:loginFolder -- --browser chrome --group loginFolder --ci-build-id 2 & npm run cy:orderFolder -- --browser electron  --group orderFolder --ci-build-id 2"
   },
   "author": "Andrey Gribanov",
   "license": "ISC",

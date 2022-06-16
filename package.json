@@ -8,8 +8,10 @@
     "cy:electron": "cypress run --browser electron",
     "cy:edge": "cypress run --browser edge",
 
-    "cy:login": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/login.cy.js",
-    "cy:orderMovie": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/orderMovie.cy.js",
+    "cy:login": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/loginTest/login.cy.js",
+    "cy:main": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/loginTest/main.cy.js",
+    "cy:orderMovie": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/orderTest/orderMovie.cy.js",
+    "cy:apiPetstore": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/orderTest/api.cy.js",
 
     "cy:loginFolder": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/loginTest/*",
     "cy:orderFolder": "cypress run --record --key 676d1569-c00c-4bb3-af1c-188ba595e9fc --spec cypress/e2e/orderTest/*",

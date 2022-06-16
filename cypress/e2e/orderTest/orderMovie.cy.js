@@ -1,7 +1,7 @@
-const user = require("../fixtures/user.json");
-const admPage = require("../fixtures/adminPage.json");
-const hall = require("../fixtures/hall.json");
-const clientPage = require("../fixtures/clientPage.json");
+const user = require("../../fixtures/user.json");
+const admPage = require("../../fixtures/adminPage.json");
+const hall = require("../../fixtures/hall.json");
+const clientPage = require("../../fixtures/clientPage.json");
 
 beforeEach(() => {
   cy.viewport(Cypress.env("viewportWidth"), Cypress.env("viewportHeight"));

@@ -1,5 +1,5 @@
-const user = require("../fixtures/user.json");
-const admPage = require("../fixtures/adminPage.json");
+const user = require("../../fixtures/user.json");
+const admPage = require("../../fixtures/adminPage.json");
 
 describe("Login to admin part of service", () => {
   beforeEach(() => {
